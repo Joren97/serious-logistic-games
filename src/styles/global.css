@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Custom colors */
+@theme {
+  --color-foreground: #00283c;
+  --color-tm-orange: #fa6432;
+  --color-tm-blue: #00283c;
+}
