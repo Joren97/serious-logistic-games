@@ -2,9 +2,19 @@
 @plugin "@tailwindcss/typography";
 @plugin "daisyui";
 
-/* Custom colors */
+/* Custom fonts */
+@font-face {
+  font-family: 'TMCandor';
+  src: url('/fonts/TMCandor-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Customize theme */
 @theme {
   --color-foreground: #00283c;
   --color-tm-orange: #fa6432;
   --color-tm-blue: #00283c;
+  --font-sans: "TMCandor", "Arial"
 }
