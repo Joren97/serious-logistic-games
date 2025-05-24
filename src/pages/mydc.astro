@@ -2,6 +2,9 @@
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
+import { Image } from "astro:assets";
+import localImage from "../assets/mydc-1.jpg";
+import localImage2 from "../assets/mydc-2.jpg";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -9,4 +12,73 @@ import "../styles/global.css";
 
 <Layout>
     <h2>My DC</h2>
+    <p>
+        Deze educatieve leeromgeving wil de stap tussen theorie en praktijk
+        verkleinen door een distributiecentrum tot in het leslokaal te brengen.
+        Binnen het MyDC distributiecentrum maakt u kennis met de verschillende
+        afdelingen en hun operationele processen. (orderbeheer - voorraadbeheer
+        - locatiebeheer - orderpicking - verzending - opslag - goederenontvangst
+        - aankoop)
+    </p>
+    <div class="lg:grid lg:grid-cols-2">
+        <div>
+            <h2>MyDC bestaat uit</h2>
+            <h3>Digitale leeromgeving</h3>
+            <ul>
+                <li>
+                    Je leert het distributiecentrum en haar processen kennen.
+                    <ul>
+                        <li>Wat is de plaats van de afdeling in MyDC?</li>
+                        <li>Welke opdracht heeft deze afdeling?</li>
+                        <li>
+                            Wat zijn de taken van de werknemers op deze
+                            afdeling?
+                        </li>
+                        <li>Hoe worden deze taken uitgevoerd?</li>
+                    </ul>
+                </li>
+                <li>
+                    Je toest je kennis over deze processen.
+                    <ul>Vragen en oefeningen</ul>
+                    <ul>Feedback op het einde van de test</ul>
+                </li>
+                <li>Kennismakingslessen (in de ruimte voor de leerkracht)</li>
+            </ul>
+            <h3>Realistische magazijnleeromgeving</h3>
+            <ul>
+                <li>
+                    Als medewerker op jouw afdeling maak je deel uit van het
+                    MyDC distributiecentrum.
+                </li>
+                <li>
+                    Je past de geleerde kennis toe in het distributiecentrum
+                    MyDC.
+                </li>
+                <li>
+                    Loopt alles in de verschillende afdelingen zoals het hoort,
+                    dan zal de klant tijdig de juiste goederen krijgen.
+                </li>
+                <li>
+                    Wat als er iets fout loopt? Wat is de oorzaak? Hoe lossen we
+                    dit op?
+                </li>
+            </ul>
+        </div>
+        <div>
+            <figure class="max-w-lg">
+                <Image
+                    class:list={"h-auto max-w-full w-full rounded-lg"}
+                    src={localImage}
+                    alt="A bird sitting on a nest of eggs."
+                />
+            </figure>
+            <figure class="max-w-lg lg:ml-8">
+                <Image
+                    class:list={"h-auto max-w-full w-full rounded-lg"}
+                    src={localImage2}
+                    alt="A bird sitting on a nest of eggs."
+                />
+            </figure>
+        </div>
+    </div>
 </Layout>
