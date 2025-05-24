@@ -1,1 +1,13 @@
-<div class="c-hero"></div>
+---
+import bgImageSrc from "../assets/img-4.jpeg";
+import { getImage } from "astro:assets";
+
+const bgImage = await getImage({ src: bgImageSrc });
+---
+
+<div class="hero min-h-1/2" style={`background-image: url(${bgImage.src});`}>
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-neutral-content text-center">
+        <h1 class="mb-5 text-5xl font-bold">Serious Logistics Games</h1>
+    </div>
+</div>

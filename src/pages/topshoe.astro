@@ -2,6 +2,9 @@
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
+import { Image } from "astro:assets";
+import localImage from "../assets/img-4.jpeg";
+import localImage2 from "../assets/img-1.jpeg";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -9,4 +12,115 @@ import "../styles/global.css";
 
 <Layout pageTitle="Top Shoe">
     <h2>Top Shoe</h2>
+    <div class="lg:columns-2">
+        <p>
+            Het business game “TopShoe” laat de spelers op een speels educatieve
+            manier kennismaken met de logistieke processen en de tactische
+            beslissingen die genomen moeten worden. De spelers ondervinden dat
+            de verschillende processen in een bedrijf zo afhankelijk zijn van
+            elkaar.
+        </p>
+
+        <figure class="max-w-lg">
+            <Image
+                class:list={"h-auto max-w-full w-full rounded-lg"}
+                src={localImage}
+                alt="A bird sitting on a nest of eggs."
+            />
+        </figure>
+    </div>
+    <h3>TopShoe werkt aan volgende competenties:</h3>
+    <ul>
+        <li>Logistieke kennis</li>
+        <ul>
+            <li>
+                Verschillende logistieke functies (inkoop, voorraadbeheer,
+                planning, distributieplanning, verkoop).
+            </li>
+            <li>
+                Hoe neem ik de tactische beslissingen? Wat is hun impact op het
+                financiële bedrijfsresultaat.<br />
+            </li>
+        </ul>
+        <li>Teamwork<br /></li>
+        <ul>
+            <li>
+                Het bedrijf TopShoe kan maar 'top' zijn als het geleid wordt
+                door een 'TopTeam'.<br />
+            </li>
+        </ul>
+        <li>Communicatie<br /></li>
+        <ul>
+            <li>
+                Efficiënte communicatie, overleg en delen van kennis en gegevens
+                zijn de basis voor het kunnen nemen van de juiste beslissingen.
+            </li>
+        </ul>
+        <li>Nauwkeurigheid<br /></li>
+        <ul>
+            <li>
+                Alle processen zijn van elkaar afhankelijk. Een fout maken heeft
+                invloed op alle andere processen en dus ook het
+                bedrijfsresultaat.
+            </li>
+        </ul>
+        <li>Bedrijfseconomisch</li>
+        <ul>
+            <li>
+                Risico's op een verantwoorde manier te nemen (afwegen van pro en
+                contra).
+            </li>
+        </ul>
+        <li>Proactief</li>
+        <ul>
+            <li>
+                Verder denken dan &#8216;nu&#8217;, ook al kennen we de toekomst
+                niet 100%.
+            </li>
+        </ul>
+        <li>Informatieverwerking &amp; feedback</li>
+        <ul>
+            <li>
+                Hoe interpreteren we ons resultaat? Wat gaan we doen om het te
+                verbeteren?
+            </li>
+        </ul>
+        <li>Stressbestendig</li>
+        <ul>
+            <li>Presteren en beslissingen nemen onder tijdsdruk.</li>
+        </ul>
+    </ul>
+    <h3>TopShoe Supply Chain Competition</h3>
+    <div class="lg:columns-2">
+        <div>
+            <p>
+                De firma TopShoe wil een nieuw management en is daarom dringend
+                op zoek naar dynamische mensen voor de volgende vacatures:
+            </p>
+            <ul>
+                <li>inkoopmanager</li>
+                <li>productiemanager</li>
+                <li>voorraadbeheerder</li>
+                <li>salesmanager</li>
+                <li>distributiemanager</li>
+                <li>manager finance</li>
+            </ul>
+        </div>
+        <figure class="max-w-lg">
+            <Image
+                class:list={"h-auto max-w-full w-full rounded-lg"}
+                src={localImage2}
+                alt="A bird sitting on a nest of eggs."
+            />
+        </figure>
+    </div>
+
+    <h3>TopShoe Toolbox</h3>
+    <p>
+        Met de 'TopShoe Toobox' kan je als leerkrachten / coach zelf aan de slag
+        met het business game TopShoe. Het spel heeft een flexibele speelduur,
+        afhankelijk van de deelnemers en de gewenste aanpak door de leerkracht.
+        Dit kan gaan van 1 uur (initiatie) tot meerdere uren waarbij het spel
+        gebruikt wordt om bepaalde inzichten en vaardigheden te trainen.
+    </p>
 </Layout>

@@ -7,12 +7,12 @@ interface Props {
 }
 const { pageTitle } = Astro.props;
 const fullPageTitle = pageTitle
-	? `${pageTitle} | Serious Logistics Game`
-	: `Serious Logistics Game`;
+	? `${pageTitle} | Serious Logistics Games`
+	: `Serious Logistics Games`;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="cupcake">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -23,8 +23,9 @@ const fullPageTitle = pageTitle
 
 	<body class="flex flex-col h-dvh">
 		<Navbar />
+		<slot name="hero" />
 		<main class="container mx-auto flex grow-1">
-			<div class="py-4 prose lg:prose-xl lg:max-w-none">
+			<div class="py-4 prose lg:prose-lg lg:max-w-none">
 				<slot />
 			</div>
 		</main>
